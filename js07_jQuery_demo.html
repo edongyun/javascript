@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- jquery.js파일 읽어오기 -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+    </ul>
+    <input id="execute_btn" type="button" value="execute" />
+    <script type="text/javascript">
+     $('#execute_btn').click(function(){  //id값이 execute_btn인 버튼을 클릭하면 
+        $('#list li').text('coding everybody');  //#list li: id값이 list인 태그의 하위 li 태그
+     })
+    </script>
+</body>
+</html>
