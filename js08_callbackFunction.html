@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var numbers = [20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+		var sortfunc = function(a, b){
+			console.log(a, b);
+			// if(a>b){
+			// 	return 1;   //양수
+			// }else if(a<b){
+			// 	return -1;  //음수
+			// }else{
+			// 	return 0;   //zero
+			// }
+			return a-b;
+		}
+		numbers.sort();  //numbers는 배열 객체
+		console.log(numbers.sort(sortfunc));
+	</script>
+</body>
+</html>
