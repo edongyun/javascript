@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <img src="http://www.ncsacademy.com/javascript/images/image006.jpg">
+  <img src="http://www.ncsacademy.com/javascript/images/chrome-50x50.jpg">
+  <br>
+  <!-- DOM 객체에 접근하여 img의 크기를 변경하고 경고창을 띄우는 예제 -->
+  <input type="button" value="이미지 크기 500으로 변경" onclick="imgs[0].style.width='500px'">  
+  <input type="button" value="이미지 크기 200으로 변경" onclick="imgs[0].style.width='200px'">
+  <input type="button" value="경고창" onclick="window.alert('hello world')">
+
+  <script>
+    var imgs = document.getElementsByTagName('img');  //img 태그들을 배열형태로 가져온다.
+    console.log(imgs);  //img 태그 배열
+    console.log(imgs[0]);  //첫 번째 이미지 객체
+    console.log(imgs[1]);  //두 번째 이미지 객체
+
+    //imgs[0].style.width='500px';
+  </script>
+</body>
+</html>
