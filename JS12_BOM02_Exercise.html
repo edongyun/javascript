@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var info = navigator.userAgent.toLowerCase();  //운영체제 정보를 구해와 소문자로 변환한다.
+    var OS_Img = null;
+
+    if(info.indexOf('windows')>=0){
+      OS_Img = "https://www.tt-exchange.org/sites/default/files/images/LS-48427_1.png";
+    }else if(info.indexOf('android')>=0){
+      OS_Img = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Android_logo_2.svg/250px-Android_logo_2.svg.png";
+    }else{
+      OS_Img = "https://2.bp.blogspot.com/-g23PknlXIxs/WSW8e3c1GNI/AAAAAAAACTw/g7dAubL37K0DcH0GYXYI-almBAiJrGHVACLcB/s640/understanding-operating-system.jpg";
+    }
+
+    document.write(`<img src=${OS_Img}>`,"<br");
+
+    var scr = screen;
+    var sc_w = scr.width;
+    var sc_h = scr.height;
+
+    document.write(`모니터 해상도 너비: ${sc_w} px <br>`);
+    document.write(`모니터 해상도 높이: ${sc_h} px <br>`);
+  </script>
+</body>
+</html>
