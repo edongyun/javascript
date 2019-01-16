@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <script>
+   //html 페이지 로드가 완료되면 할당된 함수를 실행한다.
+   window.onload = function(){
+      alert('window 객체 로드 완료');
+    }
+  </script>
 </head>
 <body>
   <script>
+    alert('Process - 0');
+    document.write('<h1>Process - 0</h1>');
+
     //open( ) 메서드로 팝업창 띄우기
     window.open("http://www.naver.com", "new window", "width=800, heigth=600, left=50, top=10");
 
