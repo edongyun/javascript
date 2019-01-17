@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <ul>
+      <li class = 'active'>HTML</li>
+      <li id = 'active'>CSS</li>
+      <li class = 'active'>JavaScript</li>
+    </ul>
+
+  <script>
+    //DOM tagSelector를 이용한 색상 변경
+    var tagSelector_DOM = function(){
+      var lis = document.getElementsByTagName('li');
+      for(var i=0; i<lis.length; i++){
+      lis[i].style.color = 'red';
+      }
+    }
+
+    //DOM classSelector를 이용한 색상 변경
+    var classSelector_DOM = function(){
+      var lis = document.getElementsByClassName('active');
+      for(var i=0; i<lis.length; i++){
+      lis[i].style.color = 'red';
+      }
+    }
+
+    //DOM idSelector를 이용한 색상 변경
+    var idSelector_DOM = function(){
+      var li = document.getElementById('active');
+      li.style.color = 'red';
+      li.style.textDecoration = 'underline';
+    }
+
+    //jQuery tagSelector를 이용한 색상 변경
+    var tagSelector_jQuery = function(){
+      $('li').css('color', 'blue');
+    }
+    
+    //jQuery classSelector를 이용한 색상 변경
+    var classSelector_jQuery = function(){
+      $('.active').css('color', 'blue');
+    }    
+    
+    //jQuery idSelector를 이용한 색상 변경
+    var idSelector_jQuery = function(){
+      $('#active').css('color', 'blue').css('textDecoration', 'underline');
+    }    
+  </script>
+
+<p>
+  DOM tagSelector를 이용한 색상 변경<br>
+  <input type="button" value="DOM" onclick="tagSelector_DOM()">
+  <input type="button" value="jQuery" onclick="tagSelector_jQuery()">
+</p>
+<p>
+  DOM classSelector를 이용한 색상 변경<br>
+  <input type="button" value="DOM" onclick="classSelector_DOM()">
+  <input type="button" value="jQuery" onclick="classSelector_jQuery()">  
+</p>
+<p>
+  DOM idSelector를 이용한 색상 변경<br>
+  <input type="button" value="DOM" onclick="idSelector_DOM()">
+  <input type="button" value="jQuery" onclick="idSelector_jQuery()">  
+</p>
+
+</body>
+</html>
