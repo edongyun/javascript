@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js"></script>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <script>
+    var li = $('li');  //jQuery함수로 jQuery객체 가져오기
+    console.log(li);  
+
+    //jQuery객체에 인자를 두 개주면 '설정'이 된다.
+    li.css('text-decoration', 'underline');  //암시적 반복
+
+    //jQuery객체에 인자를 하나만 주면 '가져오기'가 된다.
+    console.log(li.css('text-decoration'));  //
+
+  </script>
+
+  //두 가지 css 스타일을 동시에 체인처럼 연결해서 적용할 수 있다.
+  <input type="button" value="jQuery 체이닝" onclick="li.css('text-decoration', 'none').css('color', 'blue')">
+
+</body>
+</html>
